@@ -1,0 +1,18 @@
+.wysiwyg_editor {
+	padding: 0rem 1.5rem 3rem;
+	@include breakpoint(smallx) {
+        padding: 0rem 2rem 3rem;
+    }
+	@include breakpoint(medium) {
+        padding: 0rem 2.5rem 4.5rem;
+    }
+	@include breakpoint(large) {
+       padding-bottom: 6.75rem;
+    }
+	.centered_wrapper {
+		@include breakpoint(medium) {
+			max-width: 750px;
+			margin: 0 auto;
+		}
+	}
+}

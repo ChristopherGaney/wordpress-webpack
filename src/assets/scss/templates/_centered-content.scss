@@ -1,0 +1,65 @@
+
+.centered_content {
+	max-width: 1440px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0rem 1.5rem 3rem;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	@include breakpoint(smallx) {
+        padding: 0rem 2rem 3rem;
+    }
+	@include breakpoint(medium) {
+        padding: 0rem 2.5rem 4.5rem;
+    }
+	@include breakpoint(large) {
+       padding-bottom: 6.75rem;
+    }
+	.centered_wrapper {
+		text-align: center;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 1440px;
+	}
+	.headline_block {
+		margin-top: -.4rem;
+		h1,h2 {
+			margin: 0 auto;
+		}
+		h3,h4 {
+			margin: 1.25rem auto 0 auto;
+		}
+	}
+	.paragraph_block {
+		padding-top: 1rem;
+		p {
+			margin: 0 auto;
+		}
+	}
+	.image_block {
+		
+	}
+	.list_block {
+		ul {
+			margin: 0 auto;
+			&.bullets_left {
+				li {
+					margin-left: 1rem;
+					padding-left: .5rem;
+				}
+			}
+			&.bullets_center {
+				li {
+					padding-left: .5rem;
+				}
+			}
+		}
+	}
+	.button_block {
+		padding-top: 1.9rem;
+	}
+}
+
+
+/////////////////

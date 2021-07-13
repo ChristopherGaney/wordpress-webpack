@@ -1,0 +1,227 @@
+.full-slider {
+    //min-height: 600px;
+    margin-bottom: 3rem;
+    min-height: 600px;
+    @include breakpoint(400px) {
+        min-height: 812px;
+    }
+    @include breakpoint(medium) {
+        margin-bottom: 4.5rem;
+    }
+    @include breakpoint(large) {
+        margin-bottom: 6.75rem;
+        min-height: 932px;
+        //min-height: 932px;
+    }
+    .owl-carousel {
+        opacity: 0;
+        transition: opacity .25s ease;
+        
+        &.loaded {
+            opacity: 1;
+        }
+        .owl-stage-outer {
+            width: 100%;
+        }
+    }
+    .slide_div {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        .grid-x {
+            justify-content: center;
+        }
+        .cell {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1.5rem;
+            min-height: 600px;
+            @include breakpoint(400px) {
+                min-height: 812px;
+            }
+            @include breakpoint(medium) {
+                padding: 0 2.5rem;
+            }
+            @include breakpoint(large) {
+                min-height: 932px;
+            }
+            .inside_box {
+                width: 100%;
+                 @include breakpoint(large) {
+                    max-width: 900px;
+                 }
+                 @include breakpoint(xlarge) {
+                    max-width: 1000px;
+                 }
+            }
+        }
+        .headline_block {
+        margin-top: -.4rem;
+        h1,h2,h3,h4 {
+            margin: 0 auto;
+        }
+    }
+        .headline_block {
+            margin-top: -.4rem;
+            h1 {
+                margin: 0 auto;
+                color: $white;
+                @include breakpoint(large) {
+                    font-size: 3rem;
+                    margin: 0;
+                    text-align: left !important;
+                }
+            }
+            h2 {
+                margin: 0 auto;
+                color: $white;
+                @include breakpoint(large) {
+                    margin: 0;
+                    text-align: left !important;
+                }
+            }
+            h3 {
+                margin: 0 auto;
+                color: $white;
+                @include breakpoint(large) {
+                    margin: 0;
+                    text-align: left !important;
+                }
+            }
+            h4 {
+                margin: 0 auto;
+                color: $white;
+                @include breakpoint(large) {
+                    margin: 0;
+                    text-align: left !important;
+                }
+            }
+        }
+        /* paragraph_block */
+        .paragraph_block {
+            p {
+                margin: 0 auto;
+                color: $white;
+                @include breakpoint(large) {
+                    margin: 0;
+                    text-align: left !important;
+                }
+            }
+        }
+        /* image_block */
+        .image_block {
+            img {
+                max-width: 300px;
+                margin: 0 auto;
+                @include breakpoint(large) {
+                    margin: 0;
+                }
+            }
+        }
+        /* button_block */
+        .button_block {
+            @include breakpoint(large) {
+                text-align: left !important;
+            }
+            .button {
+                width: 100%;
+                @include breakpoint(large) {
+                    width: 225px;
+                }
+            }
+        }
+    }
+    .owl-nav {
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            span {
+                font-size: 3rem;
+                font-weight: bold;
+                color: #ffffff;
+                transition: color .25s ease;
+                &:hover {
+                    color: $btn-hover-background;
+                }
+                @include breakpoint(medium) {
+                    font-size: 5rem;
+                }
+            }
+        }
+        .owl-prev {
+            top: 9rem;
+            left: 1rem;
+            @include breakpoint(medium) {
+                top: 11rem;
+                left: 1rem;
+            }
+            @include breakpoint(large) {
+                top: 24rem;
+                left: 2rem;
+            }
+        }
+        .owl-next {
+            top: 9rem;
+            right: 1rem;
+            @include breakpoint(medium) {
+                top: 11rem;
+                right: 1rem;
+            }
+            @include breakpoint(large) {
+                top: 24rem;
+                right: 2rem;
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        bottom: .6rem;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        transition: .2s ease all;
+        
+        @include breakpoint(smallx) {
+             bottom: 1.3rem;
+        }
+        @include breakpoint(medium) {
+             bottom: 2rem;
+        }
+        .owl-dot {
+            display: inline-block;
+            text-align: center;
+            height: .625rem;
+            width: .625rem;
+            background: $white;
+            border-radius: 50%;
+            border: 1px solid $white;
+            margin: 0 .25rem;
+            transition: .2s ease all;
+            @include breakpoint(large) {
+                height: .75rem;
+                width: .75rem;
+            } 
+            &:hover {
+                background: $btn-hover-background;
+                border: 1px solid $btn-hover-background;
+                transition: .2s ease all;
+            }
+            
+        }
+         .owl-dot.active {
+            background: $btn-hover-background;
+            border: 1px solid $btn-hover-background;
+            transition: .2s ease all;
+        }
+    }
+} // close .front scope
+
+
+
+
+
+/**/
+

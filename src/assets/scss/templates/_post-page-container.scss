@@ -1,0 +1,138 @@
+.post_page_container {
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 3rem;
+	@include breakpoint(medium) {
+		padding-bottom: 4.5rem;
+	}
+	@include breakpoint(large) {
+		padding: 0 2.5rem 6.75rem;
+	}
+	.content {
+		padding-bottom: 2rem;
+		@include breakpoint(medium) {
+			padding-bottom: 4rem;
+		}
+		@include breakpoint(large) {
+			padding-bottom: 6.25rem;
+			//max-width: 750px;
+			//margin: 0 auto;
+		}
+	}
+	.image_box {
+		@include breakpoint(medium) {
+			padding: 0 2.5rem;
+		}
+		@include breakpoint(large) {
+			text-align: right;
+			padding: 0;
+		}
+		a {
+			margin: 0;
+		}
+		div {
+			width: 100%;
+			//max-width: 445px;
+			background-size: cover;
+    		background-position: center center;
+    		background-repeat: no-repeat;
+    		min-height: 225px;
+    		@include breakpoint(400px) {
+    			min-height: 300px;
+    		}
+    		@include breakpoint(500px) {
+    			min-height: 360px;
+    		}
+    		@include breakpoint(medium) {
+    			min-height: 400px;
+    			max-width: 670px;
+    			margin: 0 auto;
+    		}
+    		@include breakpoint(large) {
+    			min-height: 350px;
+    			max-width: 445px;
+    			margin: 0;
+    			float: right;
+    		}
+		}
+	}
+	.post_box {
+		.text_div {
+			padding: 0 1.5rem;
+			text-align: left;
+			max-width: 750px;
+			margin: 0 auto;
+			@include breakpoint(smallx) {
+		        padding: 0 2rem;
+		    }
+			@include breakpoint(medium) {
+				padding: 0 2.5rem;
+			}
+			@include breakpoint(large) {
+				padding: 0 0 0 2rem;
+				max-width: 540px;
+				margin: 0;
+			}
+		}
+		.the_date {
+			padding-top: .55rem;
+			margin-bottom: .85rem;
+			@include breakpoint(large) {
+				padding-top: .3rem;
+				margin-bottom: .8rem;
+			}
+		}
+		h2 {
+			font-size: 2.375rem;
+			line-height: 2.375rem;
+			padding-bottom: 1.8rem;
+			@include breakpoint(medium) {
+				
+			}
+		}
+		.excerpt {
+			a {
+				display: block;
+				padding-top: .3rem;
+				color: $dark-blue;
+				font-weight: 500;
+				transition: color .25s ease-out;
+				&:hover {
+					color: $light-blue;
+					transition: color .25s ease-in;
+				}
+				@include breakpoint(large) {
+					padding-top: .9rem;
+				}
+			}
+		}
+	}
+	// Styles for single post
+	&.singular {
+		.image_box {
+			div {
+				@include breakpoint(large) {
+					float: none;
+					min-height: 400px;
+    				max-width: 750px;
+    				margin: 0 auto;
+				}
+			}
+		}
+		.post_box {
+			.text_div {
+				@include breakpoint(large) {
+					max-width: 750px;
+					margin: 0 auto;
+					padding: 0;
+				}
+	
+			}
+		}
+	}
+}
+
+
+
+
+//////////////////

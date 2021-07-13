@@ -1,0 +1,411 @@
+
+// Max Screen Width is 1601px for this project
+.responsive_demo {
+	min-height: 850px;
+	margin-bottom: 7rem;
+
+	&.one {
+		.desktop_wrap {
+			position: relative;
+			height: 776px;
+			border: 5px solid red;
+			border-radius: 10px;
+			background-size: cover;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    max-width: 1600px;
+		    margin: 0 auto;
+		    margin-top: 7rem;
+		    /*&:after {
+		    	content: 'Desktop Image to Edge of Screen-->';
+		    	position: absolute;
+		    	top: -2rem;
+		    	right: 0;
+		    	font-size: 1.5rem;
+		    	color: #444;
+		    }*/
+		}
+		.left_hider,
+		.right_hider {
+			position: absolute;
+			top: .03rem;
+			left: .03rem;
+			opacity: .5;
+			width: 636px;
+			height: 766px;
+			background: #fff;
+		}
+		.right_hider {
+			left: 60%;
+		}
+		.mobile_wrap {
+			position: relative;
+			width: 320px;
+			height: 850px;
+			border: 5px solid blue;
+			border-radius: 10px;
+			margin: 0 auto;
+			margin-top: -3rem;
+			&:after {
+		    	content: '320px Mobile View';
+		    	position: absolute;
+		    	top: -2rem;
+		    	right: 1.1rem;
+		    	font-size: 2rem;
+		    	color: #444;
+		    }
+		}
+	}
+	&.two {
+		padding-top: 3rem;
+		.desktop_wrap {
+			position: relative;
+			height: 400px;
+			width: 756.48px;
+			margin: 0 auto;
+			border: 5px solid red;
+			border-radius: 10px;
+			background-size: cover;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		}
+		.left_hider,
+		.right_hider {
+			position: absolute;
+			top: .03rem;
+			left: .01rem;
+			opacity: .5;
+			width: 216px;
+			height: 390px;
+			background: #fff;
+		}
+		.right_hider {
+			left: 71.3%;
+		}
+		.mobile_wrap {
+			position: relative;
+			width: 320px;
+			height: 850px;
+			border: 5px solid blue;
+			border-radius: 10px;
+			margin: 0 auto;
+			margin-top: -3rem;
+			&:before {
+		    	content: '320px Mobile View';
+		    	position: absolute;
+		    	top: -2rem;
+		    	right: 1.1rem;
+		    	font-size: 2rem;
+		    	color: #444;
+		    }
+		    &:after {
+		    	content: 'Reducing the height scales the entire image, so the width is also reduced';
+		    	position: absolute;
+		    	top: 28.125rem;
+		    	right: .4rem;
+		    	font-size: 2rem;
+		    	color: #444;
+		    	max-width: 300px;
+		    	text-align: center;
+		    }
+		}
+	}
+	&.three {
+		padding-top: 3rem;
+		.desktop_wrap {
+			position: relative;
+			height: 776px;
+			margin-top: 7rem;
+			border: 5px solid red;
+			border-radius: 10px;
+			background-size: 0 0;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    max-width: 1600px;
+		    margin: 0 auto;
+		    /*&:after {
+		    	content: 'Desktop Image to Edge of Screen-->';
+		    	position: absolute;
+		    	top: -2rem;
+		    	right: 0;
+		    	font-size: 1.5rem;
+		    	color: #444;
+		    }*/
+		}
+		.left_hider,
+		.right_hider {
+			position: absolute;
+			top: .03rem;
+			left: .03rem;
+			opacity: .5;
+			width: 156px;
+			height: 390px;
+			background: #fff;
+		}
+		.right_hider {
+			left: 75.3%;
+		}
+		.tablet_wrap {
+			position: relative;
+			width: 640px;
+			height: 400px;
+			border: 5px solid yellow;
+			border-radius: 10px;
+			margin: 0 auto;
+			margin-top: 10rem;
+			background-size: cover;
+		    background-position: bottom center;
+		    background-repeat: no-repeat;
+			&:after {
+		    	content: 'Mobile Images must be at least 640px wide';
+		    	position: absolute;
+		    	top: -5.8rem;
+				right: -6rem;
+				font-size: 2rem;
+				color: #444;
+				max-width: 244px;
+		    }
+		}
+		.mobile_wrap {
+			position: relative;
+			width: 320px;
+			height: 850px;
+			border: 5px solid blue;
+			border-radius: 10px;
+			margin: 0 auto;
+			margin-top: -13rem;
+			&:after {
+		    	content: '320px Mobile View';
+		    	position: absolute;
+		    	top: -2rem;
+		    	right: 1.1rem;
+		    	font-size: 2rem;
+		    	color: #444;
+		    }
+		}
+	}
+	&.four {
+		padding-top: 3rem;
+		.desktop_wrap {
+			position: relative;
+			height: 776px;
+			margin-top: 7rem;
+			border: 5px solid red;
+			border-radius: 10px;
+			background-size: 0 0;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    max-width: 1600px;
+		    margin: 0 auto;
+		    &:after {
+		    	content: '[ ---------------------------------------- 1023px max tablet width ------------------- ]';
+		    	position: absolute;
+		    	top: -2.5rem;
+		    	left: 0;
+		    	font-size: 2rem;
+		    	color: #444;
+		    }
+		}
+		.left_hider,
+		.right_hider {
+
+			/*position: absolute;
+			top: .03rem;
+			left: .03rem;
+			opacity: .5;
+			width: 696px;
+			height: 766px;
+			background: #fff;*/
+		}
+		.right_hider {
+			//left: 59.35%;
+		}
+		.tablet_wrap {
+			position: relative;
+			width: 1024px;
+			height: 766px;
+			border: 5px solid yellow;
+			border-radius: 10px;
+			margin: 0;
+			background: #FDF28A;
+			&:after {
+		    	content: 'Tablet view up to 1024px. At 1024px or wider we switch from a 1 column to 2 column layout or from a 2 column to 3 column layout, depending on the design. <=====';
+		    	position: absolute;
+		    	top: 12rem;
+		    	right: -420px;
+		    	font-size: 2rem;
+		    	color: #444;
+		    	max-width: 400px;
+		    }
+		}
+		.mobile_wrap {
+			position: relative;
+			width: 640px;
+			height: 756px;
+			border: 5px solid blue;
+			border-radius: 10px;
+			margin: 0;
+			background: #D1ECFE;
+			&:after {
+		    	content: '<===== Mobile view up to 640px =====>';
+		    	position: absolute;
+		    	top: 5rem;
+		    	left: 1.5rem;
+		    	font-size: 2rem;
+		    	color: #444;
+		    }
+		}
+		.mobile_note {
+			position: absolute;
+		    top: 12rem;
+		    right: 0;
+		    font-size: 2rem;
+		    max-width: 244px;
+		}
+	}
+	&.five {
+		padding-top: 3rem;
+		.desktop_wrap {
+			position: relative;
+			height: 700px;
+			margin-top: 7rem;
+			border: 5px solid red;
+			border-radius: 10px;
+			padding-top: 7rem;
+			max-width: 1600px;
+			margin: 0 auto;
+		    /*&:after {
+		    	content: 'Desktop Image to Edge of Screen-->';
+		    	position: absolute;
+		    	top: -2rem;
+		    	right: 0;
+		    	font-size: 1.5rem;
+		    	color: #444;
+		    }*/
+		}
+		.inner_wrap {
+			position: relative;
+			font-size: 0;
+			max-width: 1440px;
+			margin: 0 auto;
+			padding-top: 1rem;
+			background: #FDF28A;
+			&:before {
+				content: '[ ------------------------------------------------ 1440px max-width section ----------------------------------------------- ]';
+				position: absolute;
+				top: -2.5rem;
+				left: 0;
+				font-size: 2rem;
+				color: #444;
+			}
+		}
+		.col {
+			display: inline-block;
+			width: 50%;
+			padding: 0 1rem;
+			.image_holder {
+				height: 450px;
+				background-size: cover;
+		    	background-position: center center;
+		    	background-repeat: no-repeat;
+			}
+		}
+		.col.left .image_holder {
+			background-position: top left;
+			border: 5px solid blue;
+			border-radius: 10px;
+			position: relative;
+			&:before {
+				content: '[ --------------------Width 688px----------------------- ]';
+				position: absolute;
+				bottom: -3rem;
+				left: .1rem;
+				font-size: 2rem;
+				color: #444;
+			}
+		}
+		.col.right .image_holder {
+			border: 5px solid green;
+			border-radius: 10px;
+			position: relative;
+			&:before {
+				content: '[ --------------------Width 688px----------------------- ]';
+				position: absolute;
+				bottom: -3rem;
+				left: .1rem;
+				font-size: 2rem;
+				color: #444;
+			}
+		}
+	}
+	&.six {
+		padding-top: 3rem;
+		.desktop_wrap {
+			position: relative;
+			//height: 776px;
+			margin-top: 7rem;
+			border: 5px solid red;
+			border-radius: 10px;
+			padding-top: 3rem;
+			max-width: 950px;
+			margin: 0 auto;
+		    &:after {
+		    	content: '[ ----------------------------- Screen Width 950px --------------------------- ]';
+		    	position: absolute;
+		    	top: -2.5rem;
+		    	left: 0;
+		    	font-size: 2rem;
+		    	color: #444;
+		    }
+		}
+		.inner_wrap {
+			position: relative;
+			font-size: 0;
+			max-width: 1440px;
+			margin: 0 auto;
+			padding-top: 1rem;
+
+		}
+		.col {
+			display: inline-block;
+			width: 100%;
+			padding: 0 1rem 4rem;
+			.image_holder {
+				height: 450px;
+				background-size: cover;
+		    	background-position: center center;
+		    	background-repeat: no-repeat;
+			}
+		}
+		.col.right {
+			padding-bottom: 2rem;
+		}
+		.col.left .image_holder {
+			background-position: top left;
+			border: 5px solid blue;
+			border-radius: 10px;
+			position: relative;
+			&:before {
+				content: '[ --------------------------------- Width 908px ----------------------------- ]';
+				position: absolute;
+				top: -2.5rem;
+				left: .1rem;
+				font-size: 2rem;
+				color: #444;
+			}
+		}
+		.col.right .image_holder {
+			border: 5px solid green;
+			border-radius: 10px;
+			position: relative;
+			&:before {
+				content: '[ --------------------------------- Width 908px ----------------------------- ]';
+				position: absolute;
+				top: -2.5rem;
+				left: .1rem;
+				font-size: 2rem;
+				color: #444;
+			}
+		}
+	}
+}

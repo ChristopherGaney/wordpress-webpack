@@ -1,0 +1,47 @@
+.breadcrumb_section {
+  background: #EEEEEE;
+   margin-top: 60px;
+   
+   @include breakpoint(large) {
+        margin-top: 91px;
+  }
+  &.quality_condition {
+        margin-bottom: 3rem;
+        @include breakpoint(medium) {
+          margin-bottom: 4.5rem;
+       }
+       @include breakpoint(large) {
+            margin-bottom: 6.75rem;
+      }
+    }
+  .breadcrumbs {
+       max-width: 1440px;
+       margin: 0 auto;
+        margin-bottom: 0;
+        height: 45px;
+        display: none;
+        justify-content: flex-start;
+        align-items: center;
+        @include breakpoint(medium) {
+            display: flex;
+        }
+        
+        p {
+          margin: 0;
+          font-size: .875rem;
+          color: $black;
+          padding-left: 17px;
+          .breadcrumb_last {
+            font-weight: bold;
+          }
+        }
+        a {
+          color: $black;
+        }
+        a:hover {
+          text-decoration: none;
+          color: $btn-hover-background;
+          transition: color .25s ease-out;
+        }
+     }
+}

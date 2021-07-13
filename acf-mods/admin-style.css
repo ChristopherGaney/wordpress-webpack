@@ -1,0 +1,8 @@
+/* Here you can add admin styles for ACF fields in order to
+make the fields easier to read and understand on an admin page.
+Example below: */
+
+.slider_hero_slide .acf-field-image {
+	/* width: 49%;
+	display: inline-block; */
+}

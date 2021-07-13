@@ -1,0 +1,22 @@
+/******** Testing using Section Id for over-ride ********/
+/******** Can be seen at bottom of about page ********/
+.page_builder.dev_test {
+	.cell {
+		min-height: 400px !important;
+	}
+	@include breakpoint(medium) {
+		.paragraph_block p {
+			max-width: 750px !important;
+		}
+	}
+	@include breakpoint(large) {
+		.paragraph_block p {
+			max-width: 550px !important;
+		}
+		.grid-x .cell:first-of-type {
+				border-right: 1px solid $headline_color;
+			
+		}
+	}
+}
+/******** End Testing using Section Id for over-ride ********/

@@ -1,0 +1,199 @@
+
+
+.accordion-section {
+    width: 100%;
+    text-align: center;
+     padding: 0 2.5rem 3rem;
+    @include breakpoint(medium) {
+      padding-bottom: 4.5rem;
+   }
+    @include breakpoint(large) {
+      padding-bottom: 6.75rem;
+    }
+  
+    .accordion_wrap {
+        max-width: 1440px;
+        margin: 0 auto;
+        h1 {
+            margin-top: -.4rem;
+            color: $black;
+            text-align: left;
+            margin-bottom: .9rem;
+        }
+    }
+   
+    .accordion {
+        margin: 0 auto;
+        padding: 0;
+        transition: opacity .1s ease;
+        &.hidd {
+                opacity: 0;
+            }
+        a {
+            color: $black;
+            transition: .2s ease all;
+        }
+        a:focus h2 {
+                color: $white;
+            }
+         
+        li.is-active {
+            
+                a h2 {
+                    color: $white;
+                }
+                a:before {
+                    color: $white;
+                }
+                .accordion-title {
+                    background: $light-gray;
+                    
+                }
+            
+        }
+        .accordion-title {
+            min-height: 55px;
+            padding: 0;
+            border-top: 2px solid #e6e6e6;
+            border-left: 2px solid #e6e6e6;
+            border-right: 2px solid #e6e6e6;
+            display: block;
+            //align-items: center;
+            padding-top: .75rem;
+            padding-right: 1.75rem;
+            h2 {
+                color: $dark-blue;
+                transition: color .2s ease-in;
+                padding-left: 10px;
+                margin-bottom: 0;
+                text-align: left;
+                @include breakpoint(large) {
+                    padding-left: 2rem;
+                }
+            }
+            &.open {
+                pointer-events: none;
+            }
+            &:before {
+                color: $dark-blue;
+                font-size: 1.5rem;
+                line-height: 1rem;
+                font-weight: bold;
+                right: 5px;
+                margin-right: .5rem;
+                @include breakpoint(medium) {
+                    margin-right: 1rem;
+                    font-size: 2rem;
+                }
+                @include breakpoint(large) {
+                    margin-right: 2rem;
+                }
+            }
+            
+             &:focus:before,
+                &:active:before {
+                    color: $white;
+                }
+           
+            &:hover, &:focus {
+                background: transparent;
+            }
+                &:hover {
+                    background: $light-gray;
+                }
+                &:focus, &:active {
+                    background: $dark-blue;
+                    h2 {
+                            color: $white;
+                        }
+                    
+                }
+            
+        }
+        :last-child:not(.is-active) > .accordion-title {
+                border-bottom: 2px solid #e6e6e6;
+            } 
+    }
+    .accordion-content {
+        padding: 1rem .9rem 0;
+        border: none;
+        background: $light-gray;
+        @include breakpoint(medium) {
+            padding: 1rem 1.5rem 0;
+        }
+        @include breakpoint(large) {
+            padding: 0;
+        }
+        .inside_content {
+            align-items: center;
+            @include breakpoint(large) {
+                min-height: 170px;
+                padding: 1rem 0;
+            }
+        }
+        .large-9 {
+            @include breakpoint(large) {
+                padding-left: 2rem;
+            }
+        }
+        .large-12 {
+            padding-bottom: 1rem;
+            @include breakpoint(medium) {
+                padding-left: .5rem;
+                padding-right: .5rem;
+            }
+            @include breakpoint(large) {
+                padding: 0 2.5rem;
+            }
+         }   
+        p {
+            font-size: 16px;
+            color: $black;
+            margin-bottom: 0rem;
+            text-align: left;
+        }
+       
+        a.button.big {
+            color: $white;
+            width: 100%;
+            margin: 1.3rem 0 1.8rem 0;
+    
+            @include breakpoint(large) {
+                margin: 1.3rem 0 3rem 1.3rem;
+                width: 190px;
+                display: block;
+            }
+            @include breakpoint(1190) {
+                width: 225px;
+            }
+        }
+        .dropdown_pane {
+            height: 0px;
+            display: none;
+            font-size: 0;
+            img {
+                display: block;
+                max-width: 260px;
+                width: 100%;
+                height: 185px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+                @include breakpoint(680) {
+                    display: inline-block;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+                @include breakpoint(900) {
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    :last-child > .accordion-content:last-child {
+        border-bottom: 2px solid #e6e6e6;
+        @include breakpoint(large) {
+            
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.page_builder {
+	margin: 0 auto;
+	padding-bottom: 3rem;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+    @include breakpoint(medium) {
+      padding-bottom: 4.5rem;
+   	}
+    @include breakpoint(large) {
+      padding-bottom: 6.75rem;
+    }
+    .grid-x {
+    	margin: 0 auto;
+    	justify-content: center;
+    	&.reverse_mobile {
+    		.cell-1 {
+    			order: 2;
+    			@include breakpoint(large) {
+    				order: 1;
+    			}
+    		}
+    		.cell-2 {
+    			order: 1;
+    			@include breakpoint(large) {
+    				order: 2;
+    			}
+    		}
+    		.cell-3 {
+    			order: 3;
+    		}
+    	}
+    }
+    .cell {
+    	display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2.2rem 1.5rem;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 240px;
+        @include breakpoint(smallx) {
+            min-height: 320px;
+        }
+        @include breakpoint(420px) {
+            padding: 2.2rem 2.5rem;
+        }
+        @include breakpoint(medium) {
+            min-height: 400px;
+        }
+        @include breakpoint(large) {
+            min-height: 460px;
+        }
+        .inside_box {
+        	width: 100%;
+        }
+    }
+    
+	.headline_block {
+		margin-top: -.4rem;
+		h1,h2,h3,h4 {
+			margin: 0 auto;
+		}
+	}
+	.paragraph_block {
+		p {
+			margin: 0 auto;
+		}
+	}
+	.image_block {
+
+	}
+	.list_block {
+		ul {
+			margin: 0 auto;
+			&.bullets_left {
+				li {
+					margin-left: 1rem;
+					padding-left: .5rem;
+				}
+			}
+			&.bullets_center {
+				li {
+					padding-left: .5rem;
+				}
+			}
+		}
+	}
+	.inline_list_with_icons {
+		ul {
+			margin: 0 auto;
+			li {
+				display: inline-block;
+				position: relative;
+				img, p {
+					display: inline-block;
+				}
+			}
+			&.bullets {
+				li {
+					padding-left: 1.2rem;
+					&:before {
+						position: absolute;
+						top: -.3rem;
+						left: 0;
+						content: '\2022';
+						font-size: 25px;
+					}
+				}
+			}
+		}
+	}
+	.button_block {
+		
+	}
+	.video_block {
+		overflow: hidden;
+		position: relative;
+		height: 550px;
+		video {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			height: 550px;
+			width: 977.777777px;
+		}
+	}
+}
+
+
+
+/**/

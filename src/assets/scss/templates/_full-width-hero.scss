@@ -1,0 +1,115 @@
+
+
+.interior_hero {
+    margin-bottom: 6.75rem;
+    @include breakpoint(large) {
+        //margin-bottom: 6.75rem;
+    }
+    /*margin-bottom: 3rem;
+    @include breakpoint(medium) {
+        margin-bottom: 4.5rem;
+    }
+    @include breakpoint(large) {
+        margin-bottom: 6.75rem;
+    }*/
+    .header_image {
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity .25s ease;
+        @include breakpoint(400px) {
+            height: 812px;
+        }
+        &.loaded {
+            opacity: 1;
+        }
+         @include breakpoint(large) {
+            height: 932px;
+          }
+        }
+        .grid-padding-x > .cell {
+            padding: 0 1rem;
+            @include breakpoint(smallx) {
+                padding: 0 1.5rem;
+              }
+            @include breakpoint(medium) {
+                padding: 0 2.5rem;
+              }
+        }
+        .home_hero_canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .text-container {
+            position: relative;
+            z-index: 5;
+        }
+        h1 {
+        text-align: center;
+        padding-top: 13rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+        font-weight: 900;
+        margin: 0 auto;
+        color: #ffffff;
+        @include breakpoint(400px) {
+                padding-top: 20rem;
+              }
+        @include breakpoint(medium) {
+                //padding-top: 12rem;
+                //font-size: 2.8rem;
+              }
+        @include breakpoint(large) {
+                font-size: 4rem;
+                line-height: 3.75rem;
+                padding-top: 27.5rem;
+              }
+        }
+    p {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.25rem;
+        max-width: 35rem;
+        color: #ffffff;
+    }
+    .hero_links {
+        width: 100%;
+        transition: .2s ease all;
+        padding-top: 2rem;
+        text-align: center;
+        @include breakpoint(medium) {
+            padding-top: 3rem;
+        }
+        @include breakpoint(large) {
+            padding-top: 4rem;
+        }
+    }
+    .hero_links a {
+        width: 100%;
+        @include breakpoint(large) {
+            width: 225px;
+        }
+    }
+    .button.btn_link {
+        background: $white;
+        color: red;
+    }
+    .button.btn_link:hover {
+        background: red;
+        color: $white;
+    }
+}
+
+
+
+
+
+
+
+
+//////////////////

@@ -1,0 +1,34 @@
+
+.full-width-video {
+    text-align: center;
+    //padding: 0 2.5rem;
+    margin-bottom: 3rem;
+    //min-height: 400px;
+    @include breakpoint(medium) {
+        margin-bottom: 4.5rem;
+        //min-height: 600px;
+    }
+    @include breakpoint(large) {
+        margin-bottom: 6.75rem;
+        //min-height: 800px;
+    }
+    @include breakpoint(xlarge) {
+        padding: 0;
+    }   
+
+    .centered_wrapper{
+    	width: auto;
+    	position: relative;
+        margin: 0 auto;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #fff;
+        object-fit: contain;
+        @include breakpoint(medium) {
+            
+        }            
+    }
+}

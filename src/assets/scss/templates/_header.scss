@@ -1,0 +1,376 @@
+                 
+$bar-thickness: 2px;                    
+$button-pad: 5px;                                          
+
+$color-main: $btn-background;
+$color-active: $btn-hover-background;
+$color-link: $black;
+
+$button-height: 12px;
+$button-width: 18px;
+
+@keyframes topBurgerAnimActive {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(.5 * $button-pad) rotate(23deg);
+    }
+    100% {
+        transform: translateY($button-pad) rotate(45deg);
+    }
+}
+@keyframes topBurgerAnimNot {
+    0% {
+        transform: translateY($button-pad) rotate(45deg);
+    }
+    50% {
+        transform: translateY(.5 * $button-pad) rotate(23deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes bottomBurgerAnimActive {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-.5 * $button-pad) rotate(-23deg);
+    }
+    100% {
+        transform: translateY(-$button-pad) rotate(-45deg);
+    }
+}
+@keyframes bottomBurgerAnimNot {
+    0% {
+        transform: translateY(-$button-pad) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(-.5 * $button-pad) rotate(-23deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.header {
+    width: 100%;
+    @include clearfix;
+    position: relative;
+    //min-height: 70px;
+    z-index: 15;
+    overflow-x: hidden;
+    .top_header_bar {
+        background: gray;
+        opacity: 1;
+        transition: opacity .25s ease-out;
+        &.slider_showing {
+            opacity: 0;
+            transition: opacity .25s ease-in;
+        }
+        .cell {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 50px;
+        }
+        .cell-1 {
+            div {
+                padding-left: 1rem;
+            }
+        }
+        .cell-2 {
+            justify-content: center;
+            .button {
+                padding: .65rem .5rem;
+            }
+        }
+        .cell-3 {
+            justify-content: flex-end;
+        }
+        .icon_wrap {
+            margin-right: 1.4rem;
+            @include breakpoint(large) {
+                margin-right: 3.2rem;
+            }
+        }
+        .search_icon {
+            width: 18px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: $white;
+            transition: color .25s ease-out;
+            &:hover {
+                transition: color .25s ease-in;
+                color: $btn-hover-background;
+            }
+        }
+    }
+    .bottom_header_bar {
+        background: $white;
+        min-height: 60px;
+        margin-top: 0 !important;
+        z-index: 20;
+        max-width: 1440px;
+        margin: 0 auto;
+        &.is-stuck {
+           box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, .16);
+        }
+        @include breakpoint(large) {
+            min-height: 80px;
+        }
+    }
+    
+    .logo_cell {
+        display: flex;
+        align-items: center;
+        .logo {
+            padding-left: 1.3rem;
+            
+            @include breakpoint(large) {
+                padding-left: 2.5rem;
+            }
+            img {
+                width: 125px;
+                @include breakpoint(large) {
+                    width: 142px;
+                }
+            }
+        }
+    }
+    .nav_cell {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        ul {
+            margin: 0;
+        }
+        li {
+            display: inline-block;
+            padding-right: 2.5rem;
+            a {
+                font-size: 14px;
+                color: black;
+                text-transform: uppercase;
+                &:hover {
+                    color: $btn-hover-background;
+                }
+            }
+        }
+        .hamburger_button {
+            margin: 0rem 1.375rem 0 0;
+            .button_container {
+                position: relative;
+                height: $button-height;
+                width: $button-width;
+                cursor: pointer;
+                transition: opacity .25s ease;
+                span {
+                  background: $color-main;
+                  border: none;
+                  height: $bar-thickness;
+                  width: 100%;
+                  position: absolute;
+                  top: 0px;
+                  left: 0;
+                  transition: background .25s ease-out;
+                  cursor: pointer;
+                  
+                    
+                    &:nth-of-type(2) {
+                      top: $button-pad;
+                    }
+                    
+                    &:nth-of-type(3) {
+                      top: 2 * $button-pad;
+                    }
+                  }
+                  
+                &:hover {
+                    span {
+                        background: $color-active;
+                        transition: background .25s ease-in;
+                        }
+                    }
+                &.loaded {
+                    opacity: 1;
+                }
+                &.not-active {
+                    .top {
+                        animation-name: topBurgerAnimNot;
+                        animation-duration: .3s;
+                        animation-direction: normal;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                    }
+                    .middle {
+                        transition: background .2s ease-in .1s;
+                    }
+                    .bottom {
+                        animation-name: bottomBurgerAnimNot;
+                        animation-duration: .3s;
+                        animation-direction: normal;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-out;
+                    }
+                }
+                &.active {
+                    .top {
+                        animation-name: topBurgerAnimActive;
+                        animation-duration: .3s;
+                        animation-direction: normal;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-in;
+                        background: $color-active;
+                    }
+                    .middle {
+                        transition: background .15s ease-out;
+                        background: transparent;//$color-active;
+                    }
+                    
+                    .bottom {
+                        animation-name: bottomBurgerAnimActive;
+                        animation-duration: .3s;
+                        animation-direction: normal;
+                        animation-fill-mode: forwards;
+                        animation-timing-function: ease-in;
+                        background: $color-active;
+                    }
+                }
+            }    
+        }
+    }
+      .slider_wrap {
+        position: relative;
+        overflow: visible;
+    }
+    #searchsubmit {
+        display: none;
+    }
+    .search_slider {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+   
+    .search_panel  {
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        z-index: 1000;
+        background-color: white;
+        padding-top: .5rem;
+        transition: .6s ease all;
+        text-align: center;
+        @include breakpoint(800px) {
+            text-align: right;
+            padding-right: 2rem;
+            width: 630px;
+            right: -640px;
+        }
+    }
+    .search_panel {
+        &.show_slider {
+            transform: translateX(-100%);//590
+            transition-timing-function: cubic-bezier(.22,.94,.62,.97);
+            @include breakpoint(800px) {
+                transform: translateX(-640px);
+            }
+        }
+        div {
+            display: inline-block;
+        }
+        .panel_search_icon {
+           width: 1.8rem;
+           position: relative;
+            background: $white;
+            vertical-align: top;
+            padding-top: .3rem;
+            
+            svg {
+                font-size: 1.6rem;
+                color: $dark-blue;
+                cursor: pointer;
+                transition: .2s ease all;
+                
+                &:hover {
+                    color: $light-blue;
+                }
+            }
+            
+        }
+        .panel_input .text_input {
+            width: 14.5rem;
+            display: table-cell;
+            vertical-align: middle;
+            margin-bottom: 1.3rem;
+            border: 1px solid $light-blue;
+            @include breakpoint(smallx) {
+                  width: 17.5rem;
+               }
+            @include breakpoint(400px) {
+                width: 20rem;
+              }
+            @include breakpoint(500px) {
+                width: 26rem;
+              }
+              @include breakpoint(medium) {
+                width: 30rem;
+              }
+        }
+        .panel_input .text_input::placeholder {
+            color: $light-blue;
+        }
+        .panel_input {
+            position: relative;
+        }
+        .panel_exit_icon {
+            position: relative;
+            width: 1.8rem;
+            vertical-align: top;
+            padding-top: .08rem;
+            margin-right: 0rem;
+            
+            svg {
+                font-size: 2rem;
+                color: $dark-blue;
+                cursor: pointer;
+                transition: .2s ease all;
+                margin: .1rem 0rem 0rem 0rem;
+                &:hover {
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}
+
+// Modal Style
+.site_modal {
+    .close-button {
+        transition: color .25s ease-out;
+        color: $btn-background;
+        &:hover {
+            color: $btn-hover-background;
+            transition: color .25s ease-in;
+        }
+    }
+}
+   
+
+
+
+
+
+
+
+
+
+
+
+   ///////////////////////////////// 
+   
