@@ -1,11 +1,9 @@
 {
-  "name": "wordpress-webpack-workflow",
-  "version": "1.1.4",
-  "author": "WP-Strap",
-  "license": "MIT",
-  "homepage": "https://github.com/wp-strap/wordpress-webpack-workflow",
+  "name": "blankboot",
+  "version": "1.0.0",
   "description": "Modern WebPack workflow for WordPress front-end development and testing (plugins & themes) with handy tools included.\n",
-  "main": "index.js",
+  "homepage": "https://github.com/carrieforde/_s-with-webpack#readme",
+  "main": "index.php",
   "repository": {
     "type": "git",
     "url": "https://github.com/wp-strap/wordpress-webpack-workflow.git"
@@ -13,18 +11,19 @@
   "bugs": {
     "url": "https://github.com/wp-strap/wordpress-webpack-workflow/issues"
   },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "webpack --env NODE_ENV=production --env production",
     "prod:watch": "webpack --env NODE_ENV=production --env production --watch",
     "dev": "webpack --env NODE_ENV=development",
     "dev:watch": "webpack --env NODE_ENV=development --watch",
-    "eslint": "eslint src/assets/src/js/**/*.js",
-    "eslint:fix": "eslint src/assets/js/**/*.js --fix",
-    "stylelint": "stylelint src/assets/**/**/*.{css,scss,pcss}",
-    "stylelint:fix": "stylelint src/assets/**/**/*.{css,scss,pcss} --fix",
-    "prettier": "prettier src/assets/js/**/*.js",
-    "prettier:fix": "prettier --write src/assets/js/**/*.js",
+    "eslint": "eslint assets/src/js/**/*.js",
+    "eslint:fix": "eslint assets/src/js/**/*.js --fix",
+    "stylelint": "stylelint assets/src/**/**/*.{css,scss,pcss}",
+    "stylelint:fix": "stylelint assets/src/**/**/*.{css,scss,pcss} --fix",
+    "prettier": "prettier assets/src/js/**/*.js",
+    "prettier:fix": "prettier --write assets/src/js/**/*.js",
     "translate": "wp-pot --src '**/**/**/*.php' --dest-file 'languages/wordpress-webpack.pot' --package '{{the-project-name}}' --domain '{{the-project-text-domain}}' --last-translator '{{author_name}} <{{author_email}}>' --team '{{author_name}} <{{author_email}}>' --bug-report '{{author_url}}'"
   },
   "babel": {
@@ -47,7 +46,6 @@
       "./webpack/.stylelintrc.js"
     ]
   },
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
@@ -88,22 +86,5 @@
     "webpack-cli": "^4.3.1",
     "webpackbar": "^5.0.0-3",
     "wp-pot-cli": "^1.5.0"
-  },
-  "keywords": [
-    "wordpress",
-    "workflow",
-    "webpack",
-    "theme",
-    "plugin",
-    "WebPack",
-    "BrowserSync",
-    "PostCSS",
-    "Autoprefixer",
-    "PurgeCSS",
-    "BabelJS",
-    "Eslint",
-    "Stylelint",
-    "SCSS",
-    "WP-Pot"
-  ]
+  }
 }

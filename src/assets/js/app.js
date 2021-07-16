@@ -1,16 +1,7 @@
-//import $ from 'jquery';
-
-//window.jQuery = $;
-
-
-//var owlCarousel = require('owl.carousel/dist/owl.carousel.min.js');
-//import owlCarousel from 'owl.carousel';
-
 
 // Add scripts after jquery has loaded
 $( document ).ready(function() {
     console.log( "ready!" );
-
  
      /*****************************************************************************
         Debounce
@@ -170,93 +161,28 @@ $( document ).ready(function() {
     *****************************************************************************/
 
 
-    /*****************************************************************************
-        Jquery Easings
-    *****************************************************************************/
-
-            // Shim to make object assign work
-        if (typeof Object.assign != 'function') {
-          // Must be writable: true, enumerable: false, configurable: true
-          Object.defineProperty(Object, "assign", {
-            value: function assign(target, varArgs) { // .length of function is 2
-              'use strict';
-              if (target == null) { // TypeError if undefined or null
-                throw new TypeError('Cannot convert undefined or null to object');
-              }
-
-              var to = Object(target);
-
-              for (var index = 1; index < arguments.length; index++) {
-                var nextSource = arguments[index];
-
-                if (nextSource != null) { // Skip over if undefined or null
-                  for (var nextKey in nextSource) {
-                    // Avoid bugs when hasOwnProperty is shadowed
-                    if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-                      to[nextKey] = nextSource[nextKey];
-                    }
-                  }
-                }
-              }
-              return to;
-            },
-            writable: true,
-            configurable: true
-          });
-        }
-
-       $.easing = Object.assign({}, $.easing, {
-        easeInOutQuad: function (x, t, b, c, d) {
-            if ((t/=d/2) < 1) return c/2*t*t + b;
-            return -c/2 * ((--t)*(t-2) - 1) + b;
-        },
-        easeInQuad: function (x, t, b, c, d) {
-            return c*(t/=d)*t + b;
-        },
-        easeOutQuad: function (x, t, b, c, d) {
-            return -c *(t/=d)*(t-2) + b;
-        },
-        easeInSine: function (x, t, b, c, d) {
-            return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
-        },
-        easeOutSine: function (x, t, b, c, d) {
-            return c * Math.sin(t/d * (Math.PI/2)) + b;
-        },
-        easeInExpo: function (x, t, b, c, d) {
-            return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
-        },
-        easeInQuint: function (x, t, b, c, d) {
-            return c*(t/=d)*t*t*t*t + b;
-        },
-        easeOutQuint: function (x, t, b, c, d) {
-            return c*((t=t/d-1)*t*t*t*t + 1) + b;
-        }
-    });
-
-    /*****************************************************************************
-        End Jquery Easings
-    *****************************************************************************/
+    
 
      /*****************************************************************************
         Owl Sliders
     *****************************************************************************/
 
     // Owl Slider on Home Page Hero
-       var owl_1 = $('.owl_home_hero');
-            owl_1.owlCarousel({
-                    dots: true,
-                    items: 1,
-                    dotsData: false,
-                    loop: true,
-                    nav: true,
-                    margin: 0,
-                    autoWidth: false,
-                    singleItem: true,
-                    smartSpeed: 700,
-                    autoplay: true,
-                    autoplayTimeout: 10000
+       // var owl_1 = $('.owl_home_hero');
+       //      owl_1.owlCarousel({
+       //              dots: true,
+       //              items: 1,
+       //              dotsData: false,
+       //              loop: true,
+       //              nav: true,
+       //              margin: 0,
+       //              autoWidth: false,
+       //              singleItem: true,
+       //              smartSpeed: 700,
+       //              autoplay: true,
+       //              autoplayTimeout: 10000
                     
-        });
+       //  });
 
         // This is necessary when using dotsData: true
         /*$('.owl_1 .owl-dot').click(function() {

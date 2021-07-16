@@ -17,20 +17,7 @@ $header_search_copy = get_field('header_search_copy','option');
 <html <?php language_attributes(); ?> class="no-js">
     <head>
         <meta charset="<?php bloginfo('charset'); ?>">
-        <!-- Google Tag Manager -->
-       <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-N2T6XTC');</script>-->
-        <!-- End Google Tag Manager -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125951296-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date()); gtag('config', 'UA-125951296-1');
-        </script>
+        
         <title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
         <link href="//www.google-analytics.com" rel="dns-prefetch">
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
@@ -45,10 +32,7 @@ $header_search_copy = get_field('header_search_copy','option');
 
     </head>
     <body <?php body_class(); ?>>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2T6XTC"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+        
         <div class="page-container">
             <header class="header" id="header" role="banner">
                 <div class="top_bar">
