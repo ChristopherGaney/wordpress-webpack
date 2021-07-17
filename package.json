@@ -1,15 +1,15 @@
 {
-  "name": "blankboot",
+  "name": "webpress",
   "version": "1.0.0",
-  "description": "Modern WebPack workflow for WordPress front-end development and testing (plugins & themes) with handy tools included.\n",
-  "homepage": "https://github.com/carrieforde/_s-with-webpack#readme",
+  "description": "Webpack Wordpress Bootstrap starter theme",
+  "homepage": "https://github.com/ChristopherGaney/wordpress-webpack.git#readme",
   "main": "index.php",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wp-strap/wordpress-webpack-workflow.git"
+    "url": "https://github.com/ChristopherGaney/wordpress-webpack.git"
   },
   "bugs": {
-    "url": "https://github.com/wp-strap/wordpress-webpack-workflow/issues"
+    "url": ""
   },
   "dependencies": {},
   "scripts": {
