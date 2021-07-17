@@ -4,39 +4,13 @@
  *
  * @since 1.1.0
  */
-const magicImporter        = require( 'node-sass-magic-importer' ); // Add magic import functionalities to SASS
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' ); // Extracts the CSS files into public/css
+ 
 const BrowserSyncPlugin    = require( 'browser-sync-webpack-plugin' ) // Synchronising URLs, interactions and code changes across devices
 const WebpackBar           = require( 'webpackbar' ); // Display elegant progress bar while building or watch
 const ImageMinimizerPlugin = require( 'image-minimizer-webpack-plugin' ); // To optimize (compress) all images using
 const CopyPlugin           = require( "copy-webpack-plugin" ); // For WordPress we need to copy images from src to public to optimize them
 
 module.exports = ( projectOptions ) => {
-
-    /**
-     * CSS Rules
-     */
-    const cssRules = {
-        test:    projectOptions.projectCss.use === 'sass' ? projectOptions.projectCss.rules.sass.test : projectOptions.projectCss.rules.postcss.test,
-        exclude: /(node_modules|bower_components|vendor)/,
-        use:     [
-            MiniCssExtractPlugin.loader, // Creates `style` nodes from JS strings
-            "css-loader",  // Translates CSS into CommonJS
-            {  // loads the PostCSS loader
-                loader:  "postcss-loader",
-                options: require( projectOptions.projectCss.postCss )( projectOptions )
-            }
-        ],
-    };
-
-    if ( projectOptions.projectCss.use === 'sass' ) { // if chosen Sass then we're going to add the Sass loader
-        cssRules.use.push( { // Compiles Sass to CSS
-            loader:  'sass-loader',
-            options: {
-                sassOptions: { importer: magicImporter() }  // add magic import functionalities to sass
-            }
-        } );
-    }
 
     /**
      * JavaScript rules
@@ -73,9 +47,6 @@ module.exports = ( projectOptions ) => {
             // Uncomment this to enable profiler https://github.com/nuxt-contrib/webpackbar#options
             // { reporters: [ 'profile' ], profile: true }
         ),
-        new MiniCssExtractPlugin( { // Extracts CSS files
-            filename: projectOptions.projectCss.filename
-        } ),
         new CopyPlugin( { // Copies images from src to public
             patterns: [ { from: projectOptions.projectImagesPath, to: projectOptions.projectOutput + '/images' }, ],
         } ),
@@ -99,6 +70,6 @@ module.exports = ( projectOptions ) => {
     }
 
     return {
-        cssRules: cssRules, jsRules: jsRules, imageRules: imageRules, optimizations: optimizations, plugins: plugins
+        jsRules: jsRules, imageRules: imageRules, optimizations: optimizations, plugins: plugins
     }
 }

@@ -9,7 +9,12 @@ $btn-hover-background: red;
 $btn-hollow-border: red;
 $btn-hollow-hover-background: red;
 
-
+// testing autoprefixer with placeholder
+body {
+  ::placeholder {
+    color: gray;
+  }
+}
 .button {
   font-size: 14px;
   font-family: Helvetica, Arial, sans-serif;

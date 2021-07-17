@@ -5,11 +5,11 @@
  */
 const path = require( 'path' );
 
+
 // Paths to find our files and provide BrowserSync functionality.
 const projectPaths = {
     projectDir:        __dirname, // Current project directory absolute path.
     projectJsPath:     path.resolve( __dirname, 'src/assets/js' ),
-    projectScssPath:   path.resolve( __dirname, 'src/assets/scss' ),
     projectImagesPath: path.resolve( __dirname, 'src/assets/images' ),
     projectOutput:     path.resolve( __dirname, 'dist/assets' ),
     projectWebpack:    path.resolve( __dirname, 'webpack' ),
@@ -35,7 +35,7 @@ const projectFiles = {
     // JS configurations for development and production
     projectJs: {
         eslint:   false, // enable or disable eslint  | this is only enabled in development env.
-        filename: 'js/[name].js',
+        filename: 'js/[name].min.js',
         entry:    {
             app: projectPaths.projectJsPath + '/app.js'
         },
@@ -43,34 +43,7 @@ const projectFiles = {
             test: /\.m?js$/,
         }
     },
-    // CSS configurations for development and production
-    projectCss: {
-        postCss:   projectPaths.projectWebpack + '/postcss.config.js',
-        stylelint: false, // enable or disable stylelint | this is only enabled in development env.
-        filename:  'css/[name].css',
-        use:       'sass', // sass || postcss
-        // ^ If you want to change from Sass to PostCSS or PostCSS to Sass then you need to change the
-        // styling files which are being imported in "assets/src/js/frontend.js" and "assets/src/js/backend.js".
-        // So change "import '../sass/backend.scss'" to "import '../postcss/backend.pcss'" for example
-        rules:    {
-            sass:    {
-                test: /\.s[ac]ss$/i
-            },
-            postcss: {
-                test: /\.pcss$/i
-            }
-        },
-        purgeCss: { // PurgeCSS is only being activated in production environment
-            paths: [ // Specify content that should be analyzed by PurgeCSS
-                // __dirname + '/assets/src/js/**/*',
-                // __dirname + '/templates/**/**/*',
-                // __dirname + '/template-parts/**/**/*',
-                // __dirname + '/blocks/**/**/*',
-                // __dirname + '/*.php',
-            ]
-        }
-    },
-    // Source Maps configurations
+    //Source Maps configurations
     projectSourceMaps: {
         // Sourcemaps are nice for debugging but takes lots of time to compile,
         // so we disable this by default and can be enabled when necessary
