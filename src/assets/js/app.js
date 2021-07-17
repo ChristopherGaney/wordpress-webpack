@@ -1,7 +1,14 @@
+import 'bootstrap'
 
 // Add scripts after jquery has loaded
 $( document ).ready(function() {
     console.log( "ready!" );
+
+ // checking for bootstrap js
+ var bootstrapish = (typeof $().popover == 'function');
+ console.log(bootstrapish);
+
+
  
      /*****************************************************************************
         Debounce
